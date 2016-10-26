@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Prosper Loan Data Visualization</title>
+  <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="draw_final.js"></script>
+  <link rel="stylesheet" type="text/css" href="draw_final.css" />   
+</head>
+<body>
+  <div id="tooltip" class="hidden">
+      <p><strong><span id="value">100</span></strong></p>
+      <p>  Click for On/Off </p>
+  </div>
+  
+  <script type="text/javascript">
+    
+    //Add title on the page
+    d3.select("body")
+      .append("h1")
+      .text("Who received the Lowest Borrower Rate from Prosper"); 
+    
+    var div = d3.select("body")
+                .append("div")
+                .attr("class", "table");
+
+    // Add text above the chart
+    var side_text = div.append("side_text")
+                       .attr("class", "side_text")
+                       .append("h2")
+                       .text("Quarterly average Borrwer Rate");
+
+    d3.select(".side_text")
+      .append("h3")
+      .attr("id", "subtitle")
+      .text("Income")
+      .style("opacity", 0);
+
+    d3.select(".side_text")
+      .append("p")
+      .text("Click Cell or Line for detail")
+      .style("opacity", 0);
+      
+    //table cell data
+    var items = [["Not employed"],
+                 ["$1-24,999"],
+                 ["$25,000-49,999"],
+                 ["$50,000-74,999"],
+                 ["$75,000-99,999"],
+                 ["$100,000+"]];
+
+    //line title and line id mapping
+    var IncomeRange = {
+                        "Not employed": "l3",
+                        "$1-24,999": "l0",
+                        "$25,000-49,999": "l5",
+                        "$50,000-74,999": "l1",
+                        "$75,000-99,999": "l2",
+                        "$100,000+": "l4"
+                      };
+
+    //Define table, head and body
+    var table = div.append("table");
+    var thead = table.append("thead");
+    var tbody = table.append("tbody");
+
+    // create the table header
+    thead.selectAll("th")
+         .data(["Income Range"])
+         .enter()
+         .append("th")
+         .text(function(d) {return d;});
+
+    // create rows
+    var tr = tbody.selectAll("tr")
+                  .data(items)
+                  .enter()
+                  .append("tr");
+    
+    // fill the table cells
+    var td = tr.selectAll("td")
+               .data(function(d) {return d;})
+               .enter()
+               .append("td")
+               .text(function(d) {return d;}) 
+               .style("opacity", 0);
+
+    //Define chart note
+    var note = "Prosper, a P2P lending platform, " +
+               "was <strong>shut down</strong> by the SEC in Q4 2008, " +
+               "and <strong>restarted</strong> the business in Q2 2009. " + 
+               "The chart shows quarterly average " +
+               "rate for different income ranges." ;
+
+    var chart_tip = d3.select("body")
+                      .append("div")
+                      .attr("class", "chart_tip")
+                      .html(note);
+
+    //Define circles' tooltip
+    var circle_tooltip = d3.select("body")
+                           .append("div")
+                           .attr("class", "circle_tooltip")
+                           .style("opacity", 0);
+  </script>
+</body>
+</html>

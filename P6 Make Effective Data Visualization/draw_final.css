@@ -1,0 +1,125 @@
+    body {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 14px;
+    }
+
+    h1, p {
+      text-align: center;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: lightgrey;
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+    }
+
+    #tooltip {
+        position: absolute;
+        width: auto;
+        height: auto;
+        padding: 8px;
+        line-height: 2;
+        text-align: center;
+        background-color: powderblue;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+    }
+
+    #tooltip.hidden {
+        display: none;
+    }
+
+    #tooltip p {
+        margin: 0;
+        line-height: 20px;
+    }
+
+    .circle_tooltip {
+          position: absolute;
+          width: auto;
+          height: auto;
+          padding: 8px;
+          text-align: center;
+          background-color: powderblue;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          pointer-events: none;
+    }
+
+    .side_text {
+          position: absolute;
+          left: 240px;
+          top: 70px;
+          text-align: left;
+          line-height: 2;
+    }
+
+    #subtitle {
+          position: absolute;
+          left: -15px;
+          top: 130px;
+          width: auto;
+          color: darkblue;
+          font-size: 18px;
+    }
+
+    .chart_tip {
+          position: absolute;
+          left: 920px;
+          top: 500px;
+          width: 130px;
+          height: auto;
+          padding: 5px;
+          text-align: left;
+          line-height: 1; 
+          opacity: .5      
+    }
+
+    table {
+          position: absolute;
+          left: 50px;
+          top: 200px;
+          width: 130px;
+          margin-top: 20px;
+    }
+
+    th, td {
+            font-size:1em;
+            padding-left:7px;
+            padding-right:7px;
+            padding-top:4px;
+            padding-bottom:4px;
+            vertical-align:middle;
+            text-align:left;
+    }
+
+    th {       
+        color:white;
+        background-color:steelblue;
+    }
+
+    td {
+        color: darkslateblue;
+        background-color:powderblue;
+    }
+
+    td.rowkey {
+        text-align:left;
+    }
+
+    td:hover {
+        color:#000000;
+        background-color:#E0E0E0;
+        text-decoration: underline;
+    }

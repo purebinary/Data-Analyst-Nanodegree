@@ -1,0 +1,7 @@
+
+References
+1) MongoDB Documentation: https://docs.mongodb.com/
+2) http://stackoverflow.com/questions/7058120/whats-the-best-way-to-format-a-phone-number-in-python
+2) Udacity Data Wrangling course
+3) Udacity forum: discussions.udacity.com
+

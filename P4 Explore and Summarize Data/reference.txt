@@ -1,0 +1,13 @@
+Resources used in this project
+
+1. THE IMPACT OF WINE COMPONENTS ON THE CHEMICAL AND SENSORY PROPERTIES OF WINES:
+	By REMEDIOS R. VILLAMOR
+	https://research.libraries.wsu.edu/xmlui/bitstream/handle/2376/4103/villamor_wsu_0251e_10425.pdf?sequence=1
+
+2. Ggplot2 Documents:
+	http://docs.ggplot2.org/
+
+3. http://rmarkdown.rstudio.com/
+
+4. Quick-R:
+	http://www.statmethods.net/
